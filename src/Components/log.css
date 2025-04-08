@@ -1,0 +1,130 @@
+/* Enhanced Transitions and Transformations for Dark Theme Login Page */
+
+body, html {
+    /* height: 100%; */
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-repeat:repeat-y;
+    background: linear-gradient(to bottom, #232526, #414345); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fc0000;
+  }
+  .card-body{
+    height: max-content;
+  }
+  nav{
+    position:inherit;
+  }
+  .login-page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .dropdown{
+    margin-right: 6%;
+    color: #e0e0e0;
+  }
+  .dropdown-toggle{
+    color: #fafafa;
+  }
+  .feedback{
+    display: flex;
+    flex-direction: column;
+    max-width: auto;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+  }
+  .feed{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    margin-left: 240px;
+    /* color: red; */
+  }
+  .text-light{
+    margin-top: 10px;
+  }
+  textarea{
+    border-radius: 10px;
+  }
+  .logo-container {
+    width: 120px;
+    height: 120px;
+    background-size: cover;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: scale(1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .logo-container:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.8);
+  }
+  
+  #login-form {
+    background-color: #424242;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  #login-form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  }
+  
+  .title {
+    color: #fafafa;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .input-field {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #757575;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #e0e0e0;
+    transition: border-color 0.5s ease, transform 0.5s ease;
+  }
+  
+  .input-field:focus {
+    outline: none;
+    border-bottom-color: #BB86FC;
+    transform: translateY(-3px);
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #6200ee; /* Change to a solid color on hover */
+    transform: translateY(-3px);
+  }
+  
+  ::placeholder {
+    color: #bbb;
+  }
+  
+  @media (max-width: 768px) {
+    #login-form {
+      padding: 20px;
+    }
+  }
+  
