@@ -55,12 +55,11 @@ const FileUpload = ({ setfunc }) => {
   );
 };
 
-// Inline styles for CTA button and other components
 const styles = {
   container: {
     textAlign: 'center',
-    margin: '50px auto',
-    maxWidth: '600px',
+    margin: '40px auto',
+    maxWidth: '500px',
   },
   heading: {
     color: '#1f2937',
@@ -72,7 +71,7 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '20px',
+    gap: '16px',
   },
   fileInput: {
     fontSize: '1em',

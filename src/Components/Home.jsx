@@ -596,7 +596,7 @@ const Home = ({ setfunc }) => {
     </StoreButton>
   </Section>
     </FooterContent>
-    <FooterBottom>&copy; 2024 My Tutor. All rights reserved.</FooterBottom>
+    <FooterBottom>&copy; 2024-2026 My Tutor. All rights reserved.</FooterBottom>
     </Footer>
     </Container>
   );
