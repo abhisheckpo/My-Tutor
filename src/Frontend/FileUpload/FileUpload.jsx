@@ -55,47 +55,46 @@ const FileUpload = ({ setfunc }) => {
   );
 };
 
-// Inline styles for CTA button and other components
 const styles = {
   container: {
     textAlign: 'center',
-    margin: '50px auto',
-    maxWidth: '600px',
+    margin: '40px auto',
+    maxWidth: '500px',
   },
   heading: {
     color: '#fff',
-    marginBottom: '20px',
+    marginBottom: '24px',
+    fontSize: '1.5em',
+    fontWeight: '600',
   },
   form: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    gap: '20px',
+    gap: '16px',
   },
   fileInput: {
-    fontSize: '1em',
-    padding: '10px',
-    border: '1px solid #fff',  // Blue border
-    borderRadius: '8px',
-    color: '#03a9f4',  // White text color
-    backgroundColor: '#333',  // Black background
+    fontSize: '0.95em',
+    padding: '12px 16px',
+    border: '1px solid #444',
+    borderRadius: '6px',
+    color: '#e0e0e0',
+    backgroundColor: '#252525',
+    cursor: 'pointer',
+    transition: 'all 0.2s ease',
+    width: '100%',
   },
   button: {
-    backgroundColor: '#03a9f4',
-    color: 'black',
-    padding: '10px 20px',
+    backgroundColor: '#00bcd4',
+    color: '#ffffff',
+    padding: '12px 32px',
     border: 'none',
-    borderRadius: '8px',
+    borderRadius: '6px',
     fontSize: '1em',
+    fontWeight: '500',
     cursor: 'pointer',
-    transition: 'background-color 0.3s ease',
-    '&:disabled': {
-      backgroundColor: '#ddd',
-      cursor: 'not-allowed',
-    },
-    '&:hover': {
-      backgroundColor: '#0288d1',
-    },
+    transition: 'all 0.2s ease',
+    boxShadow: '0 2px 8px rgba(0, 188, 212, 0.3)',
   },
 };
 
