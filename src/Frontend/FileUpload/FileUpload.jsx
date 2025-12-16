@@ -63,8 +63,10 @@ const styles = {
     maxWidth: '600px',
   },
   heading: {
-    color: '#fff',
+    color: '#1f2937',
     marginBottom: '20px',
+    fontSize: '1.5em',
+    fontWeight: '600',
   },
   form: {
     display: 'flex',
@@ -74,28 +76,24 @@ const styles = {
   },
   fileInput: {
     fontSize: '1em',
-    padding: '10px',
-    border: '1px solid #fff',  // Blue border
-    borderRadius: '8px',
-    color: '#03a9f4',  // White text color
-    backgroundColor: '#333',  // Black background
+    padding: '12px 16px',
+    border: '1px solid #d1d5db',
+    borderRadius: '6px',
+    color: '#1f2937',
+    backgroundColor: '#ffffff',
+    cursor: 'pointer',
   },
   button: {
-    backgroundColor: '#03a9f4',
-    color: 'black',
-    padding: '10px 20px',
+    backgroundColor: '#2563eb',
+    color: '#ffffff',
+    padding: '12px 28px',
     border: 'none',
-    borderRadius: '8px',
+    borderRadius: '6px',
     fontSize: '1em',
+    fontWeight: '500',
     cursor: 'pointer',
-    transition: 'background-color 0.3s ease',
-    '&:disabled': {
-      backgroundColor: '#ddd',
-      cursor: 'not-allowed',
-    },
-    '&:hover': {
-      backgroundColor: '#0288d1',
-    },
+    transition: 'all 0.2s ease',
+    boxShadow: '0 2px 4px rgba(37, 99, 235, 0.2)',
   },
 };
 

@@ -18,8 +18,8 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  background-color: #282c34; // Dark blue-gray background
-  color: #f5f5f5;
+  background-color: #ffffff;
+  color: #1f2937;
   overflow-x: hidden;
 `;
 
@@ -28,83 +28,52 @@ width: 100vw;
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 40px 20px;
-background-color: #1f232a; // Darker gray for header
-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+padding: 20px 40px;
+background-color: #ffffff;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 position: relative;
 z-index: 1000;
-color: #fff;
-overflow: hidden; // To ensure the sliding effect is contained within the header
-
-&::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 4px; // Thin line height
-  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
-  background-size: 200% 100%;
-  background-position: -100% 0;
-  animation: slide 2s infinite;
-}
-
-@keyframes slide {
-  0% {
-    background-position: -100% 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
-}
+color: #1f2937;
+border-bottom: 1px solid #e5e7eb;
 `;
 
 
 const Logo = styled.h1`
-  font-size: 2.5em;
-  font-weight: 700;
-  background: linear-gradient(90deg, #00bcd4, #3b82f6, #00bcd4);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: gradientAnimation 5s ease infinite;
-  transition: transform 0.3s ease;
-
-  /* Subtle lighting effect */
-  text-shadow: 0 0 8px rgba(0, 188, 212, 0.6), 0 0 15px rgba(0, 188, 212, 0.3);
+  font-size: 2em;
+  font-weight: 600;
+  color: #2563eb;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
 
   &:hover {
-    transform: scale(1.1);
-  }
-
-  @keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+    color: #3b82f6;
   }
 `;
 
 
 const Nav = styled.nav`
   display: flex;
-  gap: 50px;
+  gap: 16px;
+  align-items: center;
 `;
 
 const NavLink = styled(Link)`
   text-decoration: none;
-  font-weight: 600;
-  color: #00bcd4; // Cyan color for navigation links
-  font-size: 1.2em;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
+  font-weight: 500;
+  color: #2563eb;
+  font-size: 0.95em;
+  transition: all 0.2s ease;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid #2563eb;
+  background-color: transparent;
+  
   &:hover {
-    color: #ff5722; // Orange color on hover
-    text-decoration: underline;
+    color: #ffffff;
+    background-color: #2563eb;
+    border-color: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
   }
 `;
 
@@ -112,92 +81,73 @@ const NavLink = styled(Link)`
 
 const HeroSection = styled(motion.section)`
   width: 100vw;
-  padding: 100px 20px;
+  padding: 100px 40px;
   text-align: center;
-  background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: #1f2937;
   position: relative;
 `;
 
 const TypingText = styled.div`
-  font-size: 3.5em;
-  margin-bottom: 20px;
-  font-weight: 700;
-  color: #00bcd4; // Cyan color for typing effect
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 2.5em;
+  margin-bottom: 16px;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+  width: 100%;
 `;
 
 const SubHeadline = styled.p`
-  font-size: 2em;
-  margin-bottom: 40px;
-  font-weight: 300;
-  color: #ffffff;
+  font-size: 1.25em;
+  margin-bottom: 32px;
+  font-weight: 400;
+  color: #6b7280;
+  text-align: center;
+  max-width: 600px;
 `;
 
 const CTAButton = styled(motion.button)`
-  padding: 12px 24px;
-  font-size: 1.5em;
+  padding: 12px 28px;
+  font-size: 1em;
+  font-weight: 500;
   color: #ffffff;
-  background-color: #00bcd4; // Cyan color for CTA button
+  background-color: #2563eb;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
 
   &:hover {
-    background-color: #0097a7; // Darker cyan on hover
-    transform: scale(1.05);
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+    transform: translateY(-1px);
+  }
+  
+  &:active {
+    transform: translateY(0);
   }
 `;
 
 const FeaturesSection = styled.section`
   width: 100vw;
-  padding: 100px 20px;
+  padding: 80px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #2c2c2c; // Darker background for features section
-  position: relative;
-  overflow: hidden;
-
-  // Background Graphics
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 70%);
-    background-size: 200% 200%;
-    background-position: -50% -50%;
-    animation: backgroundAnimation 10s linear infinite;
-    z-index: 0;
-  }
-  
-  @keyframes backgroundAnimation {
-    0% {
-      background-position: -50% -50%;
-    }
-    100% {
-      background-position: 50% 50%;
-    }
-  }
-
-  // Adjust content to be above background graphics
-  & > * {
-    position: relative;
-    z-index: 1;
-  }
+  background-color: #f9fafb;
 `;
 
-// Title
 const FeaturesTitle = styled.h3`
-  font-size: 2.5em;
-  margin-bottom: 40px;
-  color: #ffffff;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 2em;
+  margin-bottom: 48px;
+  color: #1f2937;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
 `;
 
 // Features List Container
@@ -208,134 +158,118 @@ const FeaturesList = styled.div`
   justify-content: center;
 `;
 
-// Feature Item
 const FeatureItem = styled(motion.div)`
   width: 300px;
-  padding: 20px;
-  background-color: #3a3a3a; // Slightly lighter gray for feature items
-  border: 1px solid #333;
-  border-radius: 10px;
+  padding: 32px 24px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
   text-align: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
+  transition: all 0.2s ease;
 
-  // Adding a subtle glow effect on hover
+  h4 {
+    color: #2563eb;
+    font-size: 1.25em;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  p {
+    color: #6b7280;
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+    transform: translateY(-4px);
+    border-color: #2563eb;
+    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.1);
   }
-  
-  // Add an animation to the feature items
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  animation: fadeInUp 0.6s ease-out;
 `;
 
 
 const TestimonialsSection = styled.section`
   width: 100vw;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #121212 25%, #1a1a1a 100%);
-  position: relative;
-  overflow: hidden;
+  padding: 80px 40px;
+  background-color: #ffffff;
 `;
 
 const TestimonialsTitle = styled.h3`
-  font-size: 3em;
-  margin-bottom: 40px;
+  font-size: 2em;
+  margin-bottom: 48px;
   text-align: center;
-  color: #00bcd4;
-  font-weight: 700;
-  text-shadow: 0px 0px 20px rgba(0, 188, 212, 0.5);
-  animation: fadeIn 1s ease-in-out;
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  color: #1f2937;
+  font-weight: 600;
+  width: 100%;
 `;
 
 const Testimonial = styled.div`
-  width: 100%;
   max-width: 600px;
-  margin: 30px auto;
-  padding: 30px;
-  background: radial-gradient(circle at top left, #1f1f1f, #121212);
-  border: 1px solid #00bcd4;
-  border-radius: 15px;
-  text-align: center;
-  color: #ffffff;
-  box-shadow: 0px 8px 30px rgba(0, 188, 212, 0.7);
-  transform: rotate(-1deg);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin: 24px auto;
+  padding: 24px 28px;
+  background-color: #f9fafb;
+  border-left: 3px solid #2563eb;
+  border-radius: 8px;
+  color: #1f2937;
+  transition: all 0.2s ease;
 
   &:hover {
-    transform: rotate(1deg) scale(1.08);
-    box-shadow: 0px 12px 40px rgba(0, 188, 212, 1);
+    transform: translateX(4px);
+    background-color: #f3f4f6;
   }
 
-  p {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #e0f7fa;
-    text-shadow: 0px 0px 10px rgba(0, 188, 212, 0.5);
+  p:first-child {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    font-style: italic;
+    color: #374151;
+  }
+
+  p:last-child {
+    font-size: 0.9em;
+    color: #2563eb;
+    font-weight: 500;
   }
 `;
 
 const AddReviewButton = styled.button`
   display: block;
   margin: 40px auto 0;
-  padding: 15px 30px;
-  background-color: #00bcd4;
+  padding: 12px 32px;
+  background-color: #2563eb;
   color: #ffffff;
   border: none;
-  border-radius: 50px;
-  font-size: 1.2em;
-  font-weight: bold;
-  box-shadow: 0px 6px 20px rgba(0, 188, 212, 0.5);
+  border-radius: 6px;
+  font-size: 1em;
+  font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
 
   &:hover {
-    background-color: #008c9e;
-    transform: translateY(-5px);
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
   }
 `;
 
 
-//Blog Section
-
 const BlogsSection = styled.section`
   width: 100vw;
-  padding: 60px 20px;
-  background-color: #1a1a1a; // Dark background for the blog section
-  color: #e0e0e0; // Light text color
+  padding: 80px 40px;
+  background-color: #f9fafb;
+  color: #1f2937;
 `;
 
 const BlogsTitle = styled.h3`
-  font-size: 2.5em;
-  margin-bottom: 30px;
+  font-size: 2em;
+  margin-bottom: 40px;
   text-align: center;
-  color: #00bcd4; // Light blue color for the title
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
+  color: #1f2937;
+  font-weight: 600;
+  width: 100%;
 `;
 
 const BlogList = styled.div`
@@ -345,48 +279,41 @@ const BlogList = styled.div`
 `;
 
 const BlogPost = styled.div`
-  padding: 20px;
-  background-color: #2c2c2c; // Slightly lighter gray for blog posts
-  border: 1px solid #333;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  padding: 24px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
-    background-color: #383838; // Slightly lighter on hover
+    transform: translateY(-2px);
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
   }
 `;
 
 const BlogTitle = styled.h4`
-  font-size: 1.8em;
-  color: #00bcd4; // Light blue color for blog titles
-  margin-bottom: 10px;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: #ff5722; // Orange color on hover
-  }
+  font-size: 1.25em;
+  color: #2563eb;
+  margin-bottom: 12px;
+  font-weight: 600;
 `;
 
 const BlogContent = styled.p`
-  font-size: 1.2em;
-  line-height: 1.5;
+  font-size: 0.95em;
+  line-height: 1.7;
+  color: #6b7280;
 `;
 
-//Footer Content
 const Footer = styled.footer`
   width: 100vw;
-  padding: 60px 20px;
-  background-color: #1f232a; // Dark gray background
-  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.5);
+  padding: 60px 40px 30px;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #ffffff;
-  position: relative;
-  overflow: hidden;
+  color: #1f2937;
 `;
 
 const FooterContent = styled.div`
@@ -402,49 +329,25 @@ const Section = styled.div`
   flex: 1;
   min-width: 220px;
   margin: 20px;
-  padding: 20px;
-  background-color: #252a33; // Slightly lighter background for sections
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
-  }
 `;
 
 const SectionTitle = styled.h4`
-  margin-bottom: 20px;
-  color: #00bcd4;
-  font-size: 1.5em;
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 50px;
-    height: 3px;
-    background-color: #00bcd4;
-    transition: width 0.3s ease;
-
-    ${Section}:hover & {
-      width: 100%;
-    }
-  }
+  margin-bottom: 16px;
+  color: #2563eb;
+  font-size: 1.1em;
+  font-weight: 600;
 `;
 
 const FooterLink = styled.a`
   text-decoration: none;
-  color: #00bcd4;
-  transition: color 0.3s ease, text-decoration 0.3s ease;
-  margin-bottom: 10px;
+  color: #6b7280;
+  transition: color 0.2s ease;
+  margin-bottom: 8px;
   display: block;
+  font-size: 0.9em;
 
   &:hover {
-    color: #ff5722;
-    text-decoration: underline;
+    color: #2563eb;
   }
 `;
 
@@ -453,15 +356,16 @@ const StoreButton = styled.a`
   align-items: center;
   justify-content: center;
   padding: 10px 20px;
-  background-color: #1f232a;
-  color: #fff;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.2s ease;
 
   &:hover {
-    background-color: #333;
-    transform: translateY(-5px);
+    background-color: #e5e7eb;
+    transform: translateY(-2px);
   }
 
   img {
@@ -476,13 +380,12 @@ const SocialLinks = styled.div`
   margin-top: 20px;
 
   a {
-    color: #00bcd4;
-    font-size: 1.5em;
-    transition: color 0.3s ease, transform 0.3s ease;
+    color: #6b7280;
+    font-size: 1em;
+    transition: color 0.2s ease;
 
     &:hover {
-      color: #ff5722;
-      transform: scale(1.1);
+      color: #2563eb;
     }
   }
 `;
@@ -490,30 +393,11 @@ const SocialLinks = styled.div`
 const FooterBottom = styled.div`
   width: 100%;
   padding-top: 20px;
-  border-top: 1px solid #333;
+  margin-top: 32px;
+  border-top: 1px solid #e5e7eb;
   text-align: center;
-  font-size: 1.2em;
-  position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: -5px;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, #ff5722, #00bcd4, #ff5722);
-    animation: slidebar 5s linear infinite;
-  }
-
-  @keyframes slidebar {
-    0% {
-      background-position: 0% 0%;
-    }
-    100% {
-      background-position: 100% 0%;
-    }
-  }
+  font-size: 0.9em;
+  color: #9ca3af;
 `;
 
 
