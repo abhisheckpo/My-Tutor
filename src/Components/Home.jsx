@@ -18,57 +18,62 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  background-color: #282c34; // Dark blue-gray background
-  color: #f5f5f5;
+  background-color: #ffffff;
+  color: #1f2937;
   overflow-x: hidden;
 `;
 
 const Header = styled(motion.header)`
-  width: 100vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background-color: #1f232a;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  color: #fff;
-  border-bottom: 1px solid #2a2e36;
+width: 100vw;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 40px;
+background-color: #ffffff;
+box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+position: relative;
+z-index: 1000;
+color: #1f2937;
+border-bottom: 1px solid #e5e7eb;
 `;
 
 
 const Logo = styled.h1`
   font-size: 2em;
   font-weight: 600;
-  color: #00bcd4;
+  color: #2563eb;
   letter-spacing: 0.5px;
   transition: color 0.2s ease;
 
   &:hover {
-    color: #0097a7;
+    color: #3b82f6;
   }
 `;
 
 
 const Nav = styled.nav`
   display: flex;
-  gap: 50px;
+  gap: 16px;
+  align-items: center;
 `;
 
 const NavLink = styled(Link)`
   text-decoration: none;
   font-weight: 500;
-  color: #e0e0e0;
-  font-size: 1em;
-  transition: color 0.2s ease;
-  padding: 8px 16px;
-  border-radius: 4px;
+  color: #2563eb;
+  font-size: 0.95em;
+  transition: all 0.2s ease;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 2px solid #2563eb;
+  background-color: transparent;
   
   &:hover {
-    color: #00bcd4;
-    background-color: rgba(0, 188, 212, 0.1);
+    color: #ffffff;
+    background-color: #2563eb;
+    border-color: #2563eb;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
   }
 `;
 
@@ -76,10 +81,13 @@ const NavLink = styled(Link)`
 
 const HeroSection = styled(motion.section)`
   width: 100vw;
-  padding: 100px 20px;
+  padding: 100px 40px;
   text-align: center;
-  background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  color: #1f2937;
   position: relative;
 `;
 
@@ -87,17 +95,18 @@ const TypingText = styled.div`
   font-size: 2.5em;
   margin-bottom: 16px;
   font-weight: 600;
-  color: #ffffff;
-  line-height: 1.2;
+  color: #1f2937;
+  text-align: center;
+  width: 100%;
 `;
 
 const SubHeadline = styled.p`
   font-size: 1.25em;
   margin-bottom: 32px;
   font-weight: 400;
-  color: #b0b0b0;
+  color: #6b7280;
+  text-align: center;
   max-width: 600px;
-  line-height: 1.6;
 `;
 
 const CTAButton = styled(motion.button)`
@@ -105,16 +114,16 @@ const CTAButton = styled(motion.button)`
   font-size: 1em;
   font-weight: 500;
   color: #ffffff;
-  background-color: #00bcd4;
+  background-color: #2563eb;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 188, 212, 0.3);
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
 
   &:hover {
-    background-color: #0097a7;
-    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
     transform: translateY(-1px);
   }
   
@@ -129,14 +138,16 @@ const FeaturesSection = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1a1a1a;
+  background-color: #f9fafb;
 `;
 
 const FeaturesTitle = styled.h3`
   font-size: 2em;
   margin-bottom: 48px;
-  color: #ffffff;
+  color: #1f2937;
   font-weight: 600;
+  text-align: center;
+  width: 100%;
 `;
 
 // Features List Container
@@ -150,21 +161,21 @@ const FeaturesList = styled.div`
 const FeatureItem = styled(motion.div)`
   width: 300px;
   padding: 32px 24px;
-  background-color: #252525;
-  border: 1px solid #2a2a2a;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
   text-align: center;
   transition: all 0.2s ease;
 
   h4 {
-    color: #00bcd4;
+    color: #2563eb;
     font-size: 1.25em;
     font-weight: 600;
     margin-bottom: 12px;
   }
 
   p {
-    color: #b0b0b0;
+    color: #6b7280;
     font-size: 0.95em;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -172,8 +183,8 @@ const FeatureItem = styled(motion.div)`
 
   &:hover {
     transform: translateY(-4px);
-    border-color: #00bcd4;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #2563eb;
+    box-shadow: 0 8px 16px rgba(37, 99, 235, 0.1);
   }
 `;
 
@@ -181,30 +192,31 @@ const FeatureItem = styled(motion.div)`
 const TestimonialsSection = styled.section`
   width: 100vw;
   padding: 80px 40px;
-  background-color: #252525;
+  background-color: #ffffff;
 `;
 
 const TestimonialsTitle = styled.h3`
   font-size: 2em;
   margin-bottom: 48px;
   text-align: center;
-  color: #ffffff;
+  color: #1f2937;
   font-weight: 600;
+  width: 100%;
 `;
 
 const Testimonial = styled.div`
   max-width: 600px;
   margin: 24px auto;
   padding: 24px 28px;
-  background-color: #1f1f1f;
-  border-left: 3px solid #00bcd4;
+  background-color: #f9fafb;
+  border-left: 3px solid #2563eb;
   border-radius: 8px;
-  color: #e0e0e0;
+  color: #1f2937;
   transition: all 0.2s ease;
 
   &:hover {
     transform: translateX(4px);
-    background-color: #242424;
+    background-color: #f3f4f6;
   }
 
   p:first-child {
@@ -212,12 +224,12 @@ const Testimonial = styled.div`
     line-height: 1.6;
     margin-bottom: 12px;
     font-style: italic;
-    color: #d0d0d0;
+    color: #374151;
   }
 
   p:last-child {
     font-size: 0.9em;
-    color: #00bcd4;
+    color: #2563eb;
     font-weight: 500;
   }
 `;
@@ -226,7 +238,7 @@ const AddReviewButton = styled.button`
   display: block;
   margin: 40px auto 0;
   padding: 12px 32px;
-  background-color: #00bcd4;
+  background-color: #2563eb;
   color: #ffffff;
   border: none;
   border-radius: 6px;
@@ -234,31 +246,30 @@ const AddReviewButton = styled.button`
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 188, 212, 0.3);
+  box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
 
   &:hover {
-    background-color: #0097a7;
+    background-color: #1d4ed8;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+    box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
   }
 `;
 
 
-//Blog Section
-
 const BlogsSection = styled.section`
   width: 100vw;
   padding: 80px 40px;
-  background-color: #1a1a1a;
-  color: #e0e0e0;
+  background-color: #f9fafb;
+  color: #1f2937;
 `;
 
 const BlogsTitle = styled.h3`
   font-size: 2em;
   margin-bottom: 40px;
   text-align: center;
-  color: #ffffff;
+  color: #1f2937;
   font-weight: 600;
+  width: 100%;
 `;
 
 const BlogList = styled.div`
@@ -269,21 +280,21 @@ const BlogList = styled.div`
 
 const BlogPost = styled.div`
   padding: 24px;
-  background-color: #252525;
-  border: 1px solid #2a2a2a;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
   transition: all 0.2s ease;
 
   &:hover {
     transform: translateY(-2px);
-    border-color: #00bcd4;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-color: #2563eb;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
   }
 `;
 
 const BlogTitle = styled.h4`
   font-size: 1.25em;
-  color: #00bcd4;
+  color: #2563eb;
   margin-bottom: 12px;
   font-weight: 600;
 `;
@@ -291,19 +302,18 @@ const BlogTitle = styled.h4`
 const BlogContent = styled.p`
   font-size: 0.95em;
   line-height: 1.7;
-  color: #b0b0b0;
+  color: #6b7280;
 `;
 
-//Footer Content
 const Footer = styled.footer`
   width: 100vw;
   padding: 60px 40px 30px;
-  background-color: #1f232a;
-  border-top: 1px solid #2a2e36;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #ffffff;
+  color: #1f2937;
 `;
 
 const FooterContent = styled.div`
@@ -318,27 +328,26 @@ const FooterContent = styled.div`
 const Section = styled.div`
   flex: 1;
   min-width: 220px;
-  margin: 12px;
-  padding: 0;
+  margin: 20px;
 `;
 
 const SectionTitle = styled.h4`
   margin-bottom: 16px;
-  color: #00bcd4;
+  color: #2563eb;
   font-size: 1.1em;
   font-weight: 600;
 `;
 
 const FooterLink = styled.a`
   text-decoration: none;
-  color: #b0b0b0;
+  color: #6b7280;
   transition: color 0.2s ease;
   margin-bottom: 8px;
   display: block;
   font-size: 0.9em;
 
   &:hover {
-    color: #00bcd4;
+    color: #2563eb;
   }
 `;
 
@@ -347,15 +356,16 @@ const StoreButton = styled.a`
   align-items: center;
   justify-content: center;
   padding: 10px 20px;
-  background-color: #1f232a;
-  color: #fff;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  border: 1px solid #e5e7eb;
   border-radius: 5px;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.2s ease;
 
   &:hover {
-    background-color: #333;
-    transform: translateY(-5px);
+    background-color: #e5e7eb;
+    transform: translateY(-2px);
   }
 
   img {
@@ -370,25 +380,24 @@ const SocialLinks = styled.div`
   margin-top: 20px;
 
   a {
-    color: #00bcd4;
-    font-size: 1.5em;
-    transition: color 0.3s ease, transform 0.3s ease;
+    color: #6b7280;
+    font-size: 1em;
+    transition: color 0.2s ease;
 
     &:hover {
-      color: #ff5722;
-      transform: scale(1.1);
+      color: #2563eb;
     }
   }
 `;
 
 const FooterBottom = styled.div`
   width: 100%;
-  padding-top: 24px;
+  padding-top: 20px;
   margin-top: 32px;
-  border-top: 1px solid #2a2e36;
+  border-top: 1px solid #e5e7eb;
   text-align: center;
   font-size: 0.9em;
-  color: #808080;
+  color: #9ca3af;
 `;
 
 
