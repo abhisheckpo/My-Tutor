@@ -1,23 +1,120 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
 
-# testing
-/coverage
+# PyCharm
+.idea/
+*.iml
 
-# production
-/build
+# VS Code
+.vscode/
+*.code-workspace
 
-# misc
-.DS_Store
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Python testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# React build
+build/
+dist/
+
+# Environment variables
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Generated documents (from backend processing)
+src/Backend/*.docx
+src/Backend/*.pdf
+src/Backend/*.pptx
+src/Backend/*.txt
+src/Backend/*.mp4
+src/Backend/*.mp3
+src/Backend/file.*
+
+# Keep the export utilities but ignore temporary files
+src/Backend/FlashCards/*.docx
+!src/Backend/FlashCards/export_flashcards.py
+src/Backend/Quiz/*.docx
+!src/Backend/Quiz/export_quiz.py
+src/Backend/Summary/*.docx
+!src/Backend/Summary/export_summary.py
+
+# Database (if any)
+*.db
+*.sqlite
+*.sqlite3
+database/
+
+# IDE specific
+*.sublime-project
+*.sublime-workspace
+
+# Testing
+coverage/
+
+# Misc
+.cache/
+*.pid
+*.seed
+*.pid.lock

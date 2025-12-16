@@ -12,15 +12,13 @@ import random
 import string
 import json
 
-# from moviepy.editor import VideoFileClip
-# from quiz_generator import export_quiz
-# from flash_card_generator import export_flashcards
-# from summary_generator import export_summary
+# Export utilities for document generation
 from Summary.export_summary import export_summary
 from Quiz.export_quiz import export_quiz
 from FlashCards.export_flashcards import export_flashcards
-from gemini import prompt_everyting
-# from speech_to_text import get_audio
+
+# AI model integration (using local Ollama)
+from ai_models import process_document
 
 app = FastAPI()
 
@@ -166,15 +164,8 @@ async def upload(file: UploadFile = File(...)):
     else:
         raise HTTPException(status_code=400, detail="Unsupported file type")
 
-    response = prompt_everyting(s)
-    # quiz2 = generate_quiz(response["flash_cards"])
-    # response["quiz"] += quiz2
-    # random.shuffle(response["quiz"])
-
-    # id = generate_id()
-    # response["id"] = id
-    # with open(os.getcwd() + "/database/" + id + ".json", "w") as f:
-    #     json.dump(response, f)
+    # Process document with AI model to generate educational content
+    response = process_document(s)
 
     return response
 
